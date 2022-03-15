@@ -1,0 +1,10 @@
+<div class="border mt-5">
+
+<h3>{{categoryName}}</h3>
+
+<ng-container *ngFor="let item of category" >
+  <app-item [item]="item"></app-item>
+</ng-container>
+
+</div>
+
