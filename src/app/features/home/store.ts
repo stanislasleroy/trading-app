@@ -11,6 +11,24 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
+    name: 'Silver',
+    description: 'Desc silver',
+    category: Category.MINERALS,
+    price: 1954,
+    currency: '$',
+    unit: Unit.OUNCE,
+    updateDate: new Date()
+  },
+  {
+    name: 'Platinum',
+    description: 'Desc platinum',
+    category: Category.MINERALS,
+    price: 1954,
+    currency: '$',
+    unit: Unit.OUNCE,
+    updateDate: new Date()
+  },
+  {
     name: 'Copper',
     description: 'Desc copper',
     category: Category.MINERALS,
@@ -39,7 +57,7 @@ export const ITEMS: Item[] = [
   },
   {
     name: 'Corn',
-    description: 'Desc wheat',
+    description: 'Desc corn',
     category: Category.RAW_MATERIAL,
     price: 7.31,
     currency: '$',
@@ -47,12 +65,39 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
-    name: 'Oil',
+    name: 'Coffee',
+    description: 'Desc coffee',
+    category: Category.RAW_MATERIAL,
+    price: 7.31,
+    currency: '$',
+    unit: Unit.TON,
+    updateDate: new Date()
+  },
+  {
+    name: 'Cotton',
+    description: 'Desc cotton',
+    category: Category.RAW_MATERIAL,
+    price: 7.31,
+    currency: '$',
+    unit: Unit.TON,
+    updateDate: new Date()
+  },
+  {
+    name: 'Brent Oil',
     description: 'Brent Crude',
     category: Category.HYDROCARBONS,
     price: 105,
     currency: '$',
     unit: Unit.BARREL,
+    updateDate: new Date()
+  },
+  {
+    name: 'WTI oil',
+    description: 'Where',
+    category: Category.HYDROCARBONS,
+    price: 4660,
+    currency: '$',
+    unit: Unit.BTU,
     updateDate: new Date()
   },
   {

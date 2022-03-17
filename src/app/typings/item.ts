@@ -22,7 +22,7 @@ export enum Unit {
   L = 'liter',
   M3 = 'm3',
   BARREL = 'barrel',
-  BTU = 'British Thermal Unit'
+  BTU = 'BPU'
 }
 
 export interface ItemInCart {
