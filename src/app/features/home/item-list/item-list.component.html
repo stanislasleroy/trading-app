@@ -1,4 +1,4 @@
-<h3>List of items</h3>
+<h3 class="d-flex justify-content-center">List of items</h3>
 
 <ng-container *ngFor="let category of category$ | async | keyvalue">
     <app-item-category [categoryName]="category.key" [category]="category.value"></app-item-category>
