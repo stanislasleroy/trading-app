@@ -38,6 +38,15 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
+    name: 'Corn',
+    description: 'Desc wheat',
+    category: Category.RAW_MATERIAL,
+    price: 7.31,
+    currency: '$',
+    unit: Unit.TON,
+    updateDate: new Date()
+  },
+  {
     name: 'Oil',
     description: 'Brent Crude',
     category: Category.HYDROCARBONS,

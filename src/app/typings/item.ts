@@ -24,3 +24,13 @@ export enum Unit {
   BARREL = 'barrel',
   BTU = 'British Thermal Unit'
 }
+
+export interface ItemInCart {
+  name: string;
+  description: string;
+  unitPrice: number;
+  currency: string;
+  unit: Unit;
+  category: Category;
+  quantity: number
+}

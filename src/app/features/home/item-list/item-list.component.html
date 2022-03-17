@@ -1,4 +1,4 @@
-<h1>List of items</h1>
+<h3>List of items</h3>
 
 <ng-container *ngFor="let category of category$ | async | keyvalue">
     <app-item-category [categoryName]="category.key" [category]="category.value"></app-item-category>

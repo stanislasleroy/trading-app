@@ -14,9 +14,7 @@ export class ItemService {
   public getItems(): Observable<any> {
 
     let data = _.groupBy(ITEMS, 'category');
-
     console.log(data);
-
     return of(data);
   }
 }
