@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable, of, timer} from 'rxjs';
-import {concatMap} from 'rxjs/operators';
+import {concatMap, switchMap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -17,6 +17,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.date$ = timer(0, 1000)
       .pipe(
-        concatMap(() => of(new Date().toLocaleString('fr-FR'))));
+        switchMap(() => of(new Date().toLocaleString('fr-FR'))));
   }
 }

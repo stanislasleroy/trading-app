@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ItemInCart} from '../../../typings/item';
+import {CartService} from '../../services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -8,28 +8,20 @@ import {ItemInCart} from '../../../typings/item';
 })
 export class CartComponent implements OnInit {
 
-  itemsInCart = [
-    {
-      name: 'Wheat',
-      quantity: 3,
-      unitPrice: 123
-    },
-    {
-      name: 'Corn',
-      quantity: 10,
-      unitPrice: 123
-    },
-    {
-      name: 'Oil',
-      quantity: 1,
-      unitPrice: 123
-    }
-  ] as ItemInCart[];
+  items = new Map();
 
-  constructor() {
+  constructor(private cartService: CartService) {
   }
 
   ngOnInit(): void {
+    this.items = this.cartService.getItems();
   }
 
+  decrementItem($event: string) {
+    this.cartService.decrementItem($event);
+  }
+
+  incrementItem($event: string) {
+    this.cartService.incrementItem($event);
+  }
 }

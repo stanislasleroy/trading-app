@@ -1,5 +1,6 @@
-<span>{{item?.name}}</span>
-<span>{{item?.quantity}}</span>
-<span>{{item?.unitPrice}}</span>
-<button type="button" class="btn btn-primary">+</button>
-<button type="button" class="btn btn-primary">-</button>
+<div class="d-flex bd-highlight border-bottom pb-2">
+  <span>{{item.key}}</span>
+  <button type="button" class="btn btn-primary mx-2 ms-auto" (click)="increment(item.key)">+</button>
+  <span>{{item.value.length}}</span>
+  <button type="button" class="btn btn-primary  mx-2" (click)="decrement(item.key)">-</button>
+</div>

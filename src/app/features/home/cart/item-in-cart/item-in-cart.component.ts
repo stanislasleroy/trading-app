@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ItemInCart} from '../../../../typings/item';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-item-in-cart',
@@ -9,11 +8,23 @@ import {ItemInCart} from '../../../../typings/item';
 export class ItemInCartComponent implements OnInit {
 
   @Input()
-  item: ItemInCart | undefined;
+  item: any | undefined;
 
-  constructor() { }
+  @Output() decrementEvent = new EventEmitter<string>();
+  @Output() incrementEvent = new EventEmitter<string>();
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  increment(value: string) {
+    this.incrementEvent.emit(value)
+  }
+
+  decrement(value: string) {
+    this.decrementEvent.emit(value)
+
+  }
 }

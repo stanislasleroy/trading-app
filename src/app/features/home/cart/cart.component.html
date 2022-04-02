@@ -1,6 +1,15 @@
-<h3>Cart</h3>
+<div class="container">
+  <h3>Cart</h3>
+  <!--  Your cart contains {{items.size}} items-->
 
-<ul *ngFor="let item of itemsInCart">
-  <app-item-in-cart [item]="item"></app-item-in-cart>
-</ul>
-
+  <ng-container *ngFor="let item of items | keyvalue">
+    <app-item-in-cart
+      [item]="item"
+      (decrementEvent)="decrementItem($event)"
+      (incrementEvent)="incrementItem($event)">
+    </app-item-in-cart>
+  </ng-container>
+  <div class="d-flex justify-content-center mt-3">
+    <button [disabled]="items.size == 0" class="btn btn-primary">Submit</button>
+  </div>
+</div>

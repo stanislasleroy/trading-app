@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
-import {ItemService} from '../item.service';
+import {ItemService} from '../../services/item.service';
 
 @Component({
   selector: 'app-item-list',

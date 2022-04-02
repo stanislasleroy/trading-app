@@ -22,13 +22,14 @@ export enum Unit {
   L = 'liter',
   M3 = 'm3',
   BARREL = 'barrel',
-  BTU = 'BPU'
+  BTU = 'BTU'
 }
 
 export interface ItemInCart {
   name: string;
   description: string;
   unitPrice: number;
+  totalPrice: number
   currency: string;
   unit: Unit;
   category: Category;
