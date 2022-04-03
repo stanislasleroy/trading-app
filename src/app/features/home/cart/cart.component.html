@@ -10,6 +10,10 @@
     </app-item-in-cart>
   </ng-container>
   <div class="d-flex justify-content-center mt-3">
-    <button [disabled]="items.size == 0" class="btn btn-primary">Submit</button>
+    <button
+      [disabled]="items.size == 0"
+      (click)="goToOrderDetails()"
+      class="btn btn-primary">
+      Submit</button>
   </div>
 </div>

@@ -25,13 +25,22 @@ export enum Unit {
   BTU = 'BTU'
 }
 
-export interface ItemInCart {
+export interface ItemSummary {
   name: string;
   description: string;
   unitPrice: number;
+  quantity: number
   totalPrice: number
   currency: string;
   unit: Unit;
   category: Category;
-  quantity: number
+}
+
+export interface Order {
+  id: string,
+  date: Date,
+  pending: boolean,
+  items: ItemSummary[],
+  itemNumber: number,
+  totalPrice: number
 }

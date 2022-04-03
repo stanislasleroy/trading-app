@@ -10,6 +10,7 @@ import { ItemCategoryComponent } from './features/home/item-category/item-catego
 import { HomeComponent } from './features/home/home.component';
 import { ItemInCartComponent } from './features/home/cart/item-in-cart/item-in-cart.component';
 import { NavbarComponent } from './features/navbar/navbar.component';
+import { OrderComponent } from './features/order/order.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavbarComponent } from './features/navbar/navbar.component';
     ItemCategoryComponent,
     HomeComponent,
     ItemInCartComponent,
-    NavbarComponent
+    NavbarComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

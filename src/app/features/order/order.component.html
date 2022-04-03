@@ -1,0 +1,31 @@
+<h3>Review your order</h3>
+<ng-container *ngIf="order$ | async as order">
+  <span>Order ID: {{order.id}}</span>
+  <table class="border">
+    <thead>
+    <tr class="border">
+      <th>Item</th>
+      <th>Unit Price</th>
+      <th>Unit</th>
+      <th>Quantity</th>
+      <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="border" *ngFor="let item of (order$ | async)?.items">
+      <td class="border">{{item.name}}</td>
+      <td class="border">{{item.unitPrice}}</td>
+      <td class="border">{{item.unit}}</td>
+      <td class="border">{{item.quantity}}</td>
+      <td class="border">{{item.totalPrice}}</td>
+    </tr>
+    </tbody>
+  </table>
+</ng-container>
+
+<div class="d-flex justify-content-center mt-3">
+  <button
+    (click)="submitOrder()"
+    class="btn btn-primary">
+    Submit</button>
+</div>

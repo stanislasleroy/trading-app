@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
 import * as _ from 'lodash';
-import {ITEMS} from '../home/store';
+import {ITEMS} from './store';
 import {Item} from '../../typings/item';
 
 @Injectable({

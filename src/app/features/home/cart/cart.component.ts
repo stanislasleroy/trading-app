@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CartService} from '../../services/cart.service';
+import {Router} from '@angular/router';
+import {OrderService} from '../../services/order.service';
 
 @Component({
   selector: 'app-cart',
@@ -10,7 +12,11 @@ export class CartComponent implements OnInit {
 
   items = new Map();
 
-  constructor(private cartService: CartService) {
+  constructor(
+    private cartService: CartService,
+    private orderService: OrderService,
+    private router: Router
+  ) {
   }
 
   ngOnInit(): void {
@@ -23,5 +29,10 @@ export class CartComponent implements OnInit {
 
   incrementItem($event: string) {
     this.cartService.incrementItem($event);
+  }
+
+  goToOrderDetails() {
+  let id = this.orderService.createOrder(this.items);
+    this.router.navigate(['order/' + id]);
   }
 }
