@@ -9,8 +9,9 @@ import { ItemListComponent } from './features/home/item-list/item-list.component
 import { ItemCategoryComponent } from './features/home/item-category/item-category.component';
 import { HomeComponent } from './features/home/home.component';
 import { ItemInCartComponent } from './features/home/cart/item-in-cart/item-in-cart.component';
-import { NavbarComponent } from './features/navbar/navbar.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 import { OrderComponent } from './features/order/order.component';
+import { OrdersComponent } from './features/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { OrderComponent } from './features/order/order.component';
     HomeComponent,
     ItemInCartComponent,
     NavbarComponent,
-    OrderComponent
+    OrderComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,

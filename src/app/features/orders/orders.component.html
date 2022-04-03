@@ -1,0 +1,21 @@
+<div class="container border">
+  <table class="border">
+    <thead>
+    <tr class="border">
+      <th>ID</th>
+      <th>Date</th>
+      <th>Quantity</th>
+      <th>Currency</th>
+      <th>Total price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="border" *ngFor="let order of orders$ | async">
+      <td class="border">{{order.date | date}}</td>
+      <td class="border">{{order.itemNumber}}</td>
+      <td class="border">{{order.currency}}</td>
+      <td class="border">{{order.totalPrice}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

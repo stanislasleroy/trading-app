@@ -42,5 +42,6 @@ export interface Order {
   pending: boolean,
   items: ItemSummary[],
   itemNumber: number,
-  totalPrice: number
+  totalPrice: number,
+  currency: string
 }

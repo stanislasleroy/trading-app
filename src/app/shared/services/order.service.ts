@@ -32,6 +32,33 @@ export class OrderService {
           totalPrice: 2345.09
         }
       ],
+      currency: 'USD',
+      totalPrice: 2715.11
+    },
+    {
+      id: '333333333333',
+      date: new Date(),
+      pending: false,
+      itemNumber: 4,
+      items: [
+        {
+          name: 'Oil',
+          unitPrice: 45.87,
+          quantity: 3,
+          currency: 'USD',
+          unit: Unit.BARREL,
+          totalPrice: 440.02
+        },
+        {
+          name: 'Silver',
+          unitPrice: 2345.09,
+          quantity: 1,
+          currency: 'USD',
+          unit: Unit.TON,
+          totalPrice: 2345.09
+        }
+      ],
+      currency: 'USD',
       totalPrice: 2715.11
     }
   ] as Order[];
@@ -41,39 +68,50 @@ export class OrderService {
 
   public createOrder(items: Map<string, Item[]>): string {
 
-    let itemSummary: ItemSummary[] = [];
+    let itemsSummary: ItemSummary[] = [];
 
     items.forEach(
       value => {
-        itemSummary.push({
+        itemsSummary.push({
           name: value[0].name,
           unitPrice: value[0].price,
           quantity: value.length,
           totalPrice: value[0].price * value.length,
-          currency: value[0].currency
+          currency: value[0].currency,
+          unit: value[0].unit,
         } as ItemSummary);
       }
     );
+
+   let quantity = itemsSummary.map(i => i.quantity).reduce((prev, current) => prev + current);
+   let totalPrice = itemsSummary.map(i => i.totalPrice).reduce((prev, current) => prev + current);
 
     let order = {
       id: Date.now().toString(),
       date: new Date(),
       pending: true,
-      items: itemSummary,
-      itemNumber: 15,
-      totalPrice: 345.54
+      items: itemsSummary,
+      itemNumber: quantity,
+      totalPrice: totalPrice,
     } as Order;
 
     this.orders.push(order);
     return order.id;
   }
 
-  public getOrder(id: any): Observable<Order> {
-    console.log(id);
-    console.log('Orders %o', this.orders);
+  public getOrder(id: string): Observable<Order> {
     let index = _.findIndex(this.orders, o => o.id == id);
-    console.log(index);
-
     return of(this.orders[index]);
+  }
+
+  public addOrder(id: string): void {
+    let index = _.findIndex(this.orders, o => o.id == id);
+    console.log( this.orders[index]);
+    this.orders[index].pending = false;
+  }
+
+  public getOrders(): Observable<Order[]> {
+    //return of(this.orders.filter(o => o.pending == false));
+    return of(this.orders);
   }
 }

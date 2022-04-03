@@ -3,7 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {map, switchMap, tap} from 'rxjs/operators';
 import {EMPTY, Observable} from 'rxjs';
 import {Order} from '../../typings/item';
-import {OrderService} from '../services/order.service';
+import {OrderService} from '../../shared/services/order.service';
 
 @Component({
   selector: 'app-order',
@@ -23,13 +23,12 @@ export class OrderComponent implements OnInit {
   ngOnInit(): void {
     this.order$ = this.activeRoute.params.pipe(
       map(params => params['id']),
-      switchMap(id => this.orderService.getOrder(id)),
-      tap(console.log)
+      switchMap(id => this.orderService.getOrder(id))
     );
   }
 
-  submitOrder() {
-    //let id = this.orderService.createOrder();
+  submitOrder(id: string) {
+    this.orderService.addOrder(id);
     this.router.navigate(['orders']);
   }
 }
