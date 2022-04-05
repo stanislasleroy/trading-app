@@ -25,6 +25,5 @@ export class ItemInCartComponent implements OnInit {
 
   decrement(value: string) {
     this.decrementEvent.emit(value)
-
   }
 }

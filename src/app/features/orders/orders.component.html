@@ -1,21 +1,23 @@
-<div class="container border">
-  <table class="border">
+<div class="container mx-auto">
+  <table class="table table-hover caption-top">
+    <caption>List of your orders</caption>
     <thead>
-    <tr class="border">
-      <th>ID</th>
-      <th>Date</th>
-      <th>Quantity</th>
-      <th>Currency</th>
-      <th>Total price</th>
-    </tr>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">ID</th>
+        <th scope="col">Date</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Total price</th>
+      </tr>
     </thead>
     <tbody>
-    <tr class="border" *ngFor="let order of orders$ | async">
-      <td class="border">{{order.date | date}}</td>
-      <td class="border">{{order.itemNumber}}</td>
-      <td class="border">{{order.currency}}</td>
-      <td class="border">{{order.totalPrice}}</td>
-    </tr>
+      <tr *ngFor="let order of orders$ | async; let index = index;">
+        <th scope="row">{{index + 1}}</th>
+        <td>{{order.id }}</td>
+        <td>{{order.date | date:'shortDate':'':'fr'}} at {{order.date | date:'shortTime':'':'fr'}}</td>
+        <td>{{order.itemNumber}}</td>
+        <td>{{order.totalPrice | number : '.2-2' : 'fr'}}</td>
+      </tr>
     </tbody>
   </table>
 </div>

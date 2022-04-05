@@ -2,7 +2,6 @@ export interface Item {
   name: string;
   description: string;
   price: number;
-  currency: string;
   unit: Unit;
   category: Category;
   updateDate: Date;
@@ -31,7 +30,6 @@ export interface ItemSummary {
   unitPrice: number;
   quantity: number
   totalPrice: number
-  currency: string;
   unit: Unit;
   category: Category;
 }
@@ -43,5 +41,4 @@ export interface Order {
   items: ItemSummary[],
   itemNumber: number,
   totalPrice: number,
-  currency: string
 }

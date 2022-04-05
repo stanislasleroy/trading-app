@@ -1,6 +1,6 @@
 <div class="container">
   <h3>Cart</h3>
-  <!--  Your cart contains {{items.size}} items-->
+  <span *ngIf="items.size==0">You cart is empty</span>
 
   <ng-container *ngFor="let item of items | keyvalue">
     <app-item-in-cart

@@ -25,6 +25,9 @@ export class CartService {
 
   decrementItem(name: string) {
     this.itemsInCart.get(name).pop();
+    if (this.itemsInCart.get(name).length == 0) {
+      this.itemsInCart.delete(name);
+    }
   }
 
   incrementItem(name: string) {

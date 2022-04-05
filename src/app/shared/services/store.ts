@@ -1,4 +1,4 @@
-import {Category, Item, Unit} from '../../typings/item';
+import {Category, Item, Order, Unit} from '../../typings/item';
 
 export const ITEMS: Item[] = [
   {
@@ -6,7 +6,6 @@ export const ITEMS: Item[] = [
     description: 'Desc gold',
     category: Category.MINERALS,
     price: 1954,
-    currency: '$',
     unit: Unit.OUNCE,
     updateDate: new Date()
   },
@@ -15,7 +14,6 @@ export const ITEMS: Item[] = [
     description: 'Desc silver',
     category: Category.MINERALS,
     price: 1954,
-    currency: '$',
     unit: Unit.OUNCE,
     updateDate: new Date()
   },
@@ -24,7 +22,6 @@ export const ITEMS: Item[] = [
     description: 'Desc platinum',
     category: Category.MINERALS,
     price: 1954,
-    currency: '$',
     unit: Unit.OUNCE,
     updateDate: new Date()
   },
@@ -33,7 +30,6 @@ export const ITEMS: Item[] = [
     description: 'Desc copper',
     category: Category.MINERALS,
     price: 9877,
-    currency: '$',
     unit: Unit.TON,
     updateDate: new Date()
   },
@@ -42,7 +38,6 @@ export const ITEMS: Item[] = [
     description: 'Desc nickel',
     category: Category.MINERALS,
     price: 42995,
-    currency: '$',
     unit: Unit.OUNCE,
     updateDate: new Date()
   },
@@ -51,7 +46,6 @@ export const ITEMS: Item[] = [
     description: 'Desc wheat',
     category: Category.RAW_MATERIAL,
     price: 380,
-    currency: '$',
     unit: Unit.TON,
     updateDate: new Date()
   },
@@ -60,7 +54,6 @@ export const ITEMS: Item[] = [
     description: 'Desc corn',
     category: Category.RAW_MATERIAL,
     price: 7.31,
-    currency: '$',
     unit: Unit.TON,
     updateDate: new Date()
   },
@@ -69,7 +62,6 @@ export const ITEMS: Item[] = [
     description: 'Desc coffee',
     category: Category.RAW_MATERIAL,
     price: 7.31,
-    currency: '$',
     unit: Unit.TON,
     updateDate: new Date()
   },
@@ -78,7 +70,6 @@ export const ITEMS: Item[] = [
     description: 'Desc cotton',
     category: Category.RAW_MATERIAL,
     price: 7.31,
-    currency: '$',
     unit: Unit.TON,
     updateDate: new Date()
   },
@@ -87,7 +78,6 @@ export const ITEMS: Item[] = [
     description: 'Brent Crude',
     category: Category.HYDROCARBONS,
     price: 105,
-    currency: '$',
     unit: Unit.BARREL,
     updateDate: new Date()
   },
@@ -96,7 +86,6 @@ export const ITEMS: Item[] = [
     description: 'Where',
     category: Category.HYDROCARBONS,
     price: 4660,
-    currency: '$',
     unit: Unit.BTU,
     updateDate: new Date()
   },
@@ -105,11 +94,59 @@ export const ITEMS: Item[] = [
     description: 'Where',
     category: Category.HYDROCARBONS,
     price: 4660,
-    currency: '$',
     unit: Unit.BTU,
     updateDate: new Date()
   }
 ]
+
+export const ORDERS = [
+  {
+    id: '222222222222',
+    date: new Date(),
+    pending: false,
+    itemNumber: 12,
+    items: [
+      {
+        name: 'Wheat',
+        unitPrice: 123.34,
+        quantity: 3,
+        unit: Unit.TON,
+        totalPrice: 370.02
+      },
+      {
+        name: 'Silver',
+        unitPrice: 2345.09,
+        quantity: 1,
+        unit: Unit.TON,
+        totalPrice: 2345.09
+      }
+    ],
+    totalPrice: 2715.11
+  },
+  {
+    id: '333333333333',
+    date: new Date(),
+    pending: false,
+    itemNumber: 4,
+    items: [
+      {
+        name: 'Oil',
+        unitPrice: 45.87,
+        quantity: 3,
+        unit: Unit.BARREL,
+        totalPrice: 440.02
+      },
+      {
+        name: 'Silver',
+        unitPrice: 2345.09,
+        quantity: 1,
+        unit: Unit.TON,
+        totalPrice: 2345.09
+      }
+    ],
+    totalPrice: 2715.11
+  }
+] as Order[];
 
 
 
