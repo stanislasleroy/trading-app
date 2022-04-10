@@ -10,13 +10,11 @@ import {ItemService} from '../../../shared/services/item.service';
 export class ItemListComponent implements OnInit {
 
   category$ = new Observable<any>();
-  category2$ = new Observable<any>();
 
   constructor(private itemService: ItemService) {
   }
 
   ngOnInit(): void {
     this.category$ = this.itemService.getItems();
-    this.category2$ = this.itemService.getItems4();
   }
 }

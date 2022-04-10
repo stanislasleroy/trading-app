@@ -1,25 +1,28 @@
-import {Directive, ElementRef, Input, OnChanges, Renderer2, SimpleChanges} from '@angular/core';
+import {Directive, ElementRef, Input, Renderer2} from '@angular/core';
 import {Item} from '../../typings/item';
 
 @Directive({
   selector: '[appAppPriceEvolution]'
 })
-export class AppPriceEvolutionDirective implements OnChanges {
+export class AppPriceEvolutionDirective {
 
-  @Input() appAppPriceEvolution: Item | undefined;
+  private _item!: Item;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['appAppPriceEvolution']) {
-      if (changes['appAppPriceEvolution'].currentValue.currentPrice > changes['appAppPriceEvolution'].currentValue.previousPrice) {
-        this.renderer.removeClass(this.el.nativeElement.children[0], 'bg-danger');
-        this.renderer.addClass(this.el.nativeElement.children[0], 'bg-success');
-      } else if (changes['appAppPriceEvolution'].currentValue.currentPrice < changes['appAppPriceEvolution'].currentValue.previousPrice) {
-        this.renderer.removeClass(this.el.nativeElement.children[0], 'bg-success');
-        this.renderer.addClass(this.el.nativeElement.children[0], 'bg-danger');
-      }
+  get appAppPriceEvolution(): Item {
+    return this._item;
+  }
+
+  @Input()
+  set appAppPriceEvolution(item: Item) {
+    if (item.currentPrice > item.previousPrice) {
+      this.renderer.removeClass(this.el.nativeElement.children[0], 'bg-danger');
+      this.renderer.addClass(this.el.nativeElement.children[0], 'bg-success');
+    } else if (item.currentPrice < item.previousPrice) {
+      this.renderer.removeClass(this.el.nativeElement.children[0], 'bg-success');
+      this.renderer.addClass(this.el.nativeElement.children[0], 'bg-danger');
     }
   }
 }

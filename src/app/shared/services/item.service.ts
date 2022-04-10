@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
-import {from, Observable, of, timer} from 'rxjs';
+import {from, Observable, timer} from 'rxjs';
 import * as _ from 'lodash';
 import {ITEMS} from './store';
 import {Item} from '../../typings/item';
-import {groupBy, map, mergeMap, reduce, switchMap, tap, toArray} from 'rxjs/operators';
+import {groupBy, map, mergeMap, reduce, switchMap, toArray} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class ItemService {
   constructor() {
   }
 
-  public getItems4(): Observable<any[]> {
+  public getItems(): Observable<any[]> {
 
     return timer(0, 2000)
       .pipe(
@@ -36,24 +36,6 @@ export class ItemService {
           )
         ));
   }
-
-  public getItems(): Observable<any> {
-
-    timer(0, 1000)
-      .pipe(
-        switchMap(() => from(ITEMS)),
-        map(i => {
-          i.currentPrice = this.getCurrentMarketPrice(i.currentPrice);
-          return i
-        }),
-        tap(console.log)
-      ).subscribe();
-
-
-    let data = _.groupBy(ITEMS, 'category');
-    return of(data).pipe(tap(console.log));
-  }
-
 
   public getItem(name: string): Item | null {
     let index = _.findIndex(ITEMS, i => i.name === name);

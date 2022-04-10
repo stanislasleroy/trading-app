@@ -18,7 +18,7 @@ export class ItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    registerLocaleData( fr );
+    registerLocaleData(fr);
   }
 
   public addItem(item: Item): void {

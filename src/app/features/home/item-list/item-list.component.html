@@ -1,12 +1,5 @@
 <h3 class="d-flex justify-content-center">List of items</h3>
 
-<ng-container *ngFor="let category2 of category2$ | async">
-<!--  {{category2.values | json}}-->
-  <app-item-category [categoryName]="category2.key" [category]="category2.values"></app-item-category>
-</ng-container>
-
-<h3>TEST</h3>
-
-<ng-container *ngFor="let category of category$ | async | keyvalue">
-    <app-item-category [categoryName]="category.key" [category]="category.value"></app-item-category>
+<ng-container *ngFor="let category of category$ | async">
+  <app-item-category [categoryName]="category.key" [category]="category.values"></app-item-category>
 </ng-container>
