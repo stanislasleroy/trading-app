@@ -2,7 +2,9 @@
   <h4 class="d-flex justify-content-center">{{categoryName}}</h4>
   <div class="d-flex flex-wrap">
     <ng-container *ngFor="let item of category">
-      <app-item [item]="item"></app-item>
+      <app-item [appAppPriceEvolution]="item"
+                [item]="item">
+      </app-item>
     </ng-container>
   </div>
 </div>

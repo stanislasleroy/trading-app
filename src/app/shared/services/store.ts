@@ -5,7 +5,8 @@ export const ITEMS: Item[] = [
     name: 'Gold',
     description: 'Desc gold',
     category: Category.MINERALS,
-    price: 1954,
+    currentPrice: 1954,
+    previousPrice: 0,
     unit: Unit.OUNCE,
     updateDate: new Date()
   },
@@ -13,7 +14,8 @@ export const ITEMS: Item[] = [
     name: 'Silver',
     description: 'Desc silver',
     category: Category.MINERALS,
-    price: 1954,
+    currentPrice: 1954,
+    previousPrice: 0,
     unit: Unit.OUNCE,
     updateDate: new Date()
   },
@@ -21,7 +23,8 @@ export const ITEMS: Item[] = [
     name: 'Platinum',
     description: 'Desc platinum',
     category: Category.MINERALS,
-    price: 1954,
+    currentPrice: 1954,
+    previousPrice: 0,
     unit: Unit.OUNCE,
     updateDate: new Date()
   },
@@ -29,7 +32,8 @@ export const ITEMS: Item[] = [
     name: 'Copper',
     description: 'Desc copper',
     category: Category.MINERALS,
-    price: 9877,
+    currentPrice: 9877,
+    previousPrice: 0,
     unit: Unit.TON,
     updateDate: new Date()
   },
@@ -37,7 +41,8 @@ export const ITEMS: Item[] = [
     name: 'Nickel',
     description: 'Desc nickel',
     category: Category.MINERALS,
-    price: 42995,
+    currentPrice: 42995,
+    previousPrice: 0,
     unit: Unit.OUNCE,
     updateDate: new Date()
   },
@@ -45,7 +50,8 @@ export const ITEMS: Item[] = [
     name: 'Wheat',
     description: 'Desc wheat',
     category: Category.RAW_MATERIAL,
-    price: 380,
+    currentPrice: 380,
+    previousPrice: 0,
     unit: Unit.TON,
     updateDate: new Date()
   },
@@ -53,7 +59,8 @@ export const ITEMS: Item[] = [
     name: 'Corn',
     description: 'Desc corn',
     category: Category.RAW_MATERIAL,
-    price: 7.31,
+    currentPrice: 7.31,
+    previousPrice: 0,
     unit: Unit.TON,
     updateDate: new Date()
   },
@@ -61,7 +68,8 @@ export const ITEMS: Item[] = [
     name: 'Coffee',
     description: 'Desc coffee',
     category: Category.RAW_MATERIAL,
-    price: 7.31,
+    currentPrice: 7.31,
+    previousPrice: 0,
     unit: Unit.TON,
     updateDate: new Date()
   },
@@ -69,7 +77,8 @@ export const ITEMS: Item[] = [
     name: 'Cotton',
     description: 'Desc cotton',
     category: Category.RAW_MATERIAL,
-    price: 7.31,
+    currentPrice: 7.31,
+    previousPrice: 0,
     unit: Unit.TON,
     updateDate: new Date()
   },
@@ -77,7 +86,8 @@ export const ITEMS: Item[] = [
     name: 'Brent Oil',
     description: 'Brent Crude',
     category: Category.HYDROCARBONS,
-    price: 105,
+    currentPrice: 105,
+    previousPrice: 0,
     unit: Unit.BARREL,
     updateDate: new Date()
   },
@@ -85,7 +95,8 @@ export const ITEMS: Item[] = [
     name: 'WTI oil',
     description: 'Where',
     category: Category.HYDROCARBONS,
-    price: 4660,
+    currentPrice: 4660,
+    previousPrice: 0,
     unit: Unit.BTU,
     updateDate: new Date()
   },
@@ -93,7 +104,8 @@ export const ITEMS: Item[] = [
     name: 'Natural gas',
     description: 'Where',
     category: Category.HYDROCARBONS,
-    price: 4660,
+    currentPrice: 4660,
+    previousPrice: 0,
     unit: Unit.BTU,
     updateDate: new Date()
   }

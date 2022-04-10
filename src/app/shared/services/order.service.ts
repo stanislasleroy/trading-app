@@ -9,7 +9,6 @@ import {ORDERS} from './store';
 })
 export class OrderService {
 
-
   orders = [...ORDERS];
 
   constructor() {
@@ -23,9 +22,9 @@ export class OrderService {
       value => {
         itemsSummary.push({
           name: value[0].name,
-          unitPrice: value[0].price,
+          unitPrice: value[0].currentPrice,
           quantity: value.length,
-          totalPrice: value[0].price * value.length,
+          totalPrice: value[0].currentPrice * value.length,
           unit: value[0].unit,
         } as ItemSummary);
       }

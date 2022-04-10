@@ -1,7 +1,8 @@
 export interface Item {
   name: string;
   description: string;
-  price: number;
+  currentPrice: number;
+  previousPrice: number;
   unit: Unit;
   category: Category;
   updateDate: Date;
@@ -22,6 +23,11 @@ export enum Unit {
   M3 = 'm3',
   BARREL = 'barrel',
   BTU = 'BTU'
+}
+
+export interface ItemGroup {
+    key: string;
+    values: Item[];
 }
 
 export interface ItemSummary {

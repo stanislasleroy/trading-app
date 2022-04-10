@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Item} from '../../../typings/item';
-import {CartService} from '../../../shared/services/cart.service';
+import {Item} from '../../../../typings/item';
+import {CartService} from '../../../../shared/services/cart.service';
+import fr from '@angular/common/locales/fr';
+import {registerLocaleData} from '@angular/common';
 
 @Component({
   selector: 'app-item',
@@ -16,6 +18,7 @@ export class ItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    registerLocaleData( fr );
   }
 
   public addItem(item: Item): void {
