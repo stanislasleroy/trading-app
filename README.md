@@ -10,6 +10,6 @@ It explores several Angular and RxJS concepts like custom directives, reactive o
 # Installation
 
 - Clone the repo
-- run `npm install`
-- run `ng serve`
+- Run `npm install`
+- Run `ng serve`
 - Go to `http://localhost:4200`
