@@ -3,7 +3,7 @@ import {from, Observable, timer} from 'rxjs';
 import * as _ from 'lodash';
 import {ITEMS} from './store';
 import {Item} from '../../typings/item';
-import {groupBy, map, mergeMap, reduce, switchMap, toArray} from 'rxjs/operators';
+import {groupBy, map, mergeMap, reduce, switchMap, tap, toArray} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -15,12 +15,17 @@ export class ItemService {
 
   public getItems(): Observable<any[]> {
 
-    return timer(0, 2000)
+    let r = 0;
+
+    return timer(0, 300)
       .pipe(
+        tap(() => r = _.random(0, ITEMS.length)),
         switchMap(() => from(ITEMS).pipe(
             map(i => {
               i.previousPrice = i.currentPrice;
-              i.currentPrice = this.getCurrentMarketPrice(i.currentPrice);
+              if (i.id === r) {
+                i.currentPrice = this.getCurrentMarketPrice(i.currentPrice);
+              }
               return i
             }),
             groupBy(item => item.category),

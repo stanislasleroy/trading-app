@@ -2,8 +2,8 @@ import {Category, Item, Order, Unit} from '../../typings/item';
 
 export const ITEMS: Item[] = [
   {
+    id: 1,
     name: 'Gold',
-    description: 'Desc gold',
     category: Category.MINERALS,
     currentPrice: 1954,
     previousPrice: 0,
@@ -11,8 +11,8 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
+    id: 2,
     name: 'Silver',
-    description: 'Desc silver',
     category: Category.MINERALS,
     currentPrice: 1954,
     previousPrice: 0,
@@ -20,8 +20,8 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
+    id: 3,
     name: 'Platinum',
-    description: 'Desc platinum',
     category: Category.MINERALS,
     currentPrice: 1954,
     previousPrice: 0,
@@ -29,8 +29,8 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
+    id: 4,
     name: 'Copper',
-    description: 'Desc copper',
     category: Category.MINERALS,
     currentPrice: 9877,
     previousPrice: 0,
@@ -38,17 +38,8 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
-    name: 'Nickel',
-    description: 'Desc nickel',
-    category: Category.MINERALS,
-    currentPrice: 42995,
-    previousPrice: 0,
-    unit: Unit.OUNCE,
-    updateDate: new Date()
-  },
-  {
+    id: 5,
     name: 'Wheat',
-    description: 'Desc wheat',
     category: Category.RAW_MATERIAL,
     currentPrice: 380,
     previousPrice: 0,
@@ -56,8 +47,8 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
+    id: 6,
     name: 'Corn',
-    description: 'Desc corn',
     category: Category.RAW_MATERIAL,
     currentPrice: 7.31,
     previousPrice: 0,
@@ -65,8 +56,8 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
+    id: 7,
     name: 'Coffee',
-    description: 'Desc coffee',
     category: Category.RAW_MATERIAL,
     currentPrice: 7.31,
     previousPrice: 0,
@@ -74,8 +65,8 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
+    id: 8,
     name: 'Cotton',
-    description: 'Desc cotton',
     category: Category.RAW_MATERIAL,
     currentPrice: 7.31,
     previousPrice: 0,
@@ -83,8 +74,8 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
+    id: 9,
     name: 'Brent Oil',
-    description: 'Brent Crude',
     category: Category.HYDROCARBONS,
     currentPrice: 105,
     previousPrice: 0,
@@ -92,8 +83,8 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
+    id: 10,
     name: 'WTI oil',
-    description: 'Where',
     category: Category.HYDROCARBONS,
     currentPrice: 4660,
     previousPrice: 0,
@@ -101,8 +92,8 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
+    id: 11,
     name: 'Natural gas',
-    description: 'Where',
     category: Category.HYDROCARBONS,
     currentPrice: 4660,
     previousPrice: 0,

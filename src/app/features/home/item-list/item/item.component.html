@@ -1,9 +1,7 @@
-<div class="card text-white m-2 item">
+<div class="card m-2 item">
   <div class="card-body">
     <h5 class="card-title">{{item?.name}}</h5>
-    <p>Description: {{item?.description}}</p>
-    <p>Price: {{item?.currentPrice | number : '.2-2' : 'fr'}}</p>
-    <p>Unit: {{item?.unit}}</p>
-    <button href="#" class="btn btn-light btn-sm" (click)="addItem(item)">Add to cart</button>
+    <p>Price: {{item?.currentPrice | number : '.2-2' : 'fr'}} ({{item?.unit}})</p>
+    <button href="#" class="btn btn-primary btn-sm" (click)="addItem(item)">Add to cart</button>
   </div>
 </div>

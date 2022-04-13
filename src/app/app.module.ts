@@ -13,6 +13,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { OrderComponent } from './features/order/order.component';
 import { OrdersComponent } from './features/orders/orders.component';
 import { AppPriceEvolutionDirective } from './shared/directives/app-price-evolution.directive';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AppPriceEvolutionDirective } from './shared/directives/app-price-evolut
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
