@@ -2,7 +2,6 @@ import {Category, Item, Order, Unit} from '../../typings/item';
 
 export const ITEMS: Item[] = [
   {
-    id: 1,
     name: 'Gold',
     category: Category.MINERALS,
     currentPrice: 1954,
@@ -11,7 +10,6 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
-    id: 2,
     name: 'Silver',
     category: Category.MINERALS,
     currentPrice: 1954,
@@ -20,7 +18,6 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
-    id: 3,
     name: 'Platinum',
     category: Category.MINERALS,
     currentPrice: 1954,
@@ -29,7 +26,6 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
-    id: 4,
     name: 'Copper',
     category: Category.MINERALS,
     currentPrice: 9877,
@@ -38,7 +34,6 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
-    id: 5,
     name: 'Wheat',
     category: Category.RAW_MATERIAL,
     currentPrice: 380,
@@ -47,7 +42,6 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
-    id: 6,
     name: 'Corn',
     category: Category.RAW_MATERIAL,
     currentPrice: 7.31,
@@ -56,7 +50,6 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
-    id: 7,
     name: 'Coffee',
     category: Category.RAW_MATERIAL,
     currentPrice: 7.31,
@@ -65,7 +58,6 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
-    id: 8,
     name: 'Cotton',
     category: Category.RAW_MATERIAL,
     currentPrice: 7.31,
@@ -74,7 +66,6 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
-    id: 9,
     name: 'Brent Oil',
     category: Category.HYDROCARBONS,
     currentPrice: 105,
@@ -83,7 +74,6 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
-    id: 10,
     name: 'WTI oil',
     category: Category.HYDROCARBONS,
     currentPrice: 4660,
@@ -92,7 +82,6 @@ export const ITEMS: Item[] = [
     updateDate: new Date()
   },
   {
-    id: 11,
     name: 'Natural gas',
     category: Category.HYDROCARBONS,
     currentPrice: 4660,

@@ -21,12 +21,12 @@ export class ItemService {
       .pipe(
         tap(() => r = _.random(0, ITEMS.length)),
         switchMap(() => from(ITEMS).pipe(
-            map(i => {
-              i.previousPrice = i.currentPrice;
-              if (i.id === r) {
-                i.currentPrice = this.getCurrentMarketPrice(i.currentPrice);
+            map((item: Item, index: number) => {
+              item.previousPrice = item.currentPrice;
+              if (index === r) {
+                item.currentPrice = this.getCurrentMarketPrice(item.currentPrice);
               }
-              return i
+              return item
             }),
             groupBy(item => item.category),
             mergeMap(category => category.pipe(
