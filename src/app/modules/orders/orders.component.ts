@@ -15,7 +15,8 @@ export class OrdersComponent implements OnInit {
 
   orders$: Observable<Order[]> = EMPTY;
 
-  constructor(private orderService: OrderService) { }
+  constructor(private orderService: OrderService) {
+  }
 
   ngOnInit(): void {
     registerLocaleData(fr);

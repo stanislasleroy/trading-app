@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {map, switchMap, tap} from 'rxjs/operators';
+import {map, switchMap} from 'rxjs/operators';
 import {EMPTY, Observable} from 'rxjs';
 import {Order} from '../../typings/item';
 import {OrderService} from '../../shared/services/order.service';
@@ -18,7 +18,8 @@ export class OrderComponent implements OnInit {
     private activeRoute: ActivatedRoute,
     private router: Router,
     private orderService: OrderService,
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     this.order$ = this.activeRoute.params.pipe(
